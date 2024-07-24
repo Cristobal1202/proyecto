@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Mundo</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <!-- Puedes agregar enlaces aquí si es necesario -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Hola Mundo</h1>
+        <!-- Aquí se insertará el contenido adicional -->
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; {% now "Y" %} Mi Sitio. Todos los derechos reservados.</p>
+    </footer>
+
+    {% block scripts %}
+    <script src="{% static 'js/script.js' %}"></script>
+    {% endblock %}
+</body>
+</html>

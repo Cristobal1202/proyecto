@@ -9,7 +9,7 @@ from rest_framework.permissions import IsAuthenticated
 
 @login_required
 def index(request):
-    return render(request, 'Template/registration/login.html')
+    return render(request, 'plantilla/base.html')
 
 class ItemListCreate(generics.ListCreateAPIView):
     queryset = Item.objects.all()
