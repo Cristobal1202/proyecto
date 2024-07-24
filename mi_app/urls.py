@@ -1,7 +1,8 @@
+# mi_app/urls.py
 from django.urls import path
-from .views import ItemListCreate, ItemRetrieveUpdateDestroy
+from . import views
 
 urlpatterns = [
-    path('items/', ItemListCreate.as_view(), name='item-list-create'),
-    path('items/<int:pk>/', ItemRetrieveUpdateDestroy.as_view(), name='item-detail'),
+    path('', views.index, name = "inicio"),
+    path('salir/', views.salir, name= "salir")
 ]
